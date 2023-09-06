@@ -1,0 +1,48 @@
+using System;
+
+
+
+namespace game
+{
+    
+       
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                bool correct = false;
+                var random = new Random();
+          
+                int num = random.Next(4,10);
+                Console.WriteLine(num);
+
+             while(!correct) 
+              {
+                Console.WriteLine("guess a number  between 4 and 10");
+                int guess = Convert.ToInt32(Console.ReadLine());
+                if (guess > num)
+                {
+                    Console.WriteLine("yor guess is too high");
+                }
+                else if (guess < num)
+                {
+                    Console.WriteLine("your guess is too low");
+                    Console.WriteLine(" congratulation ...your guress is true..");
+                    correct = true;
+                }
+                else
+                    Console.WriteLine("eror");
+                    
+                
+                    
+                
+            
+              
+             }
+            
+
+            }
+
+
+        }
+}
